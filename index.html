@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>May Project | Gift & Hampers</title>
+  <title>May Project | Thoughtful Gifts</title>
 
-  <meta name="description" content="May Project - Custom gift, bouquet, hampers dan hadiah untuk berbagai momen spesial.">
+  <meta name="description"
+    content="May Project - Bouquet, gift box, hampers dan custom gifts untuk berbagai momen spesial.">
 
   <style>
     * {
@@ -16,348 +17,678 @@
       scroll-behavior: smooth;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #fffaf5;
-      color: #333;
-      line-height: 1.6;
+    :root {
+      --cream: #faf5ee;
+      --cream-dark: #eee2d2;
+      --gold: #b58a50;
+      --gold-light: #d4b27b;
+      --brown: #332b25;
+      --text: #5f5750;
+      --white: #ffffff;
     }
 
-    /* NAVBAR */
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--cream);
+      color: var(--brown);
+      line-height: 1.7;
+    }
+
+    /* ================= NAVBAR ================= */
+
     nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,250,245,0.95);
-      border-bottom: 1px solid #ead8c5;
-      padding: 18px 7%;
+      height: 75px;
+      padding: 0 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      background: rgba(250, 245, 238, 0.96);
+      border-bottom: 1px solid #e5d7c7;
     }
 
     .logo {
-      font-size: 24px;
+      color: var(--gold);
+      font-size: 23px;
       font-weight: bold;
-      letter-spacing: 3px;
-      color: #b28a52;
+      letter-spacing: 4px;
     }
 
     nav ul {
       display: flex;
+      gap: 30px;
       list-style: none;
-      gap: 25px;
     }
 
     nav a {
+      color: var(--brown);
       text-decoration: none;
-      color: #444;
       font-size: 14px;
+      transition: .3s;
     }
 
     nav a:hover {
-      color: #b28a52;
+      color: var(--gold);
     }
 
-    /* HERO */
+    /* ================= HERO ================= */
+
     .hero {
-      min-height: 90vh;
+      min-height: 88vh;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 60px 7%;
+      padding: 80px 7%;
+
       background:
-        radial-gradient(circle at top right, #f4dfc5, transparent 35%),
-        #fffaf5;
+        radial-gradient(
+          circle at 15% 20%,
+          #ead7bd 0,
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 90% 80%,
+          #ead7bd 0,
+          transparent 30%
+        ),
+        var(--cream);
     }
 
     .hero-content {
-      max-width: 800px;
+      max-width: 850px;
     }
 
-    .hero small {
-      color: #b28a52;
-      letter-spacing: 4px;
+    .eyebrow {
+      color: var(--gold);
+      letter-spacing: 5px;
+      font-size: 13px;
       text-transform: uppercase;
     }
 
     .hero h1 {
-      font-size: clamp(45px, 8vw, 90px);
-      margin: 15px 0;
+      margin: 18px 0;
+      font-size: clamp(48px, 9vw, 105px);
       letter-spacing: 8px;
-      font-weight: 700;
+      line-height: 1;
+    }
+
+    .hero h2 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      font-size: clamp(24px, 4vw, 38px);
+      color: var(--gold);
+      margin-bottom: 20px;
     }
 
     .hero p {
-      max-width: 600px;
+      max-width: 650px;
       margin: auto;
-      color: #666;
-      font-size: 17px;
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .buttons {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 30px;
       padding: 14px 30px;
-      border-radius: 30px;
-      background: #b28a52;
-      color: white;
+      border-radius: 40px;
       text-decoration: none;
-      transition: 0.3s;
+      font-size: 14px;
+      transition: .3s;
     }
 
-    .btn:hover {
+    .btn-primary {
+      background: var(--gold);
+      color: white;
+    }
+
+    .btn-primary:hover {
       transform: translateY(-3px);
-      background: #96703e;
+      background: #94703f;
     }
 
-    /* SECTION */
+    .btn-outline {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: white;
+    }
+
+    /* ================= SECTION ================= */
+
     section {
-      padding: 90px 7%;
+      padding: 100px 7%;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 55px;
     }
 
     .section-title span {
-      color: #b28a52;
-      font-size: 13px;
-      letter-spacing: 3px;
+      color: var(--gold);
       text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
     }
 
     .section-title h2 {
-      font-size: 38px;
       margin-top: 8px;
+      font-family: Georgia, serif;
+      font-size: 42px;
+      font-weight: normal;
     }
 
-    /* ABOUT */
+    .section-title p {
+      max-width: 600px;
+      margin: 10px auto;
+      color: var(--text);
+    }
+
+    /* ================= ABOUT ================= */
+
     .about {
-      max-width: 850px;
+      max-width: 900px;
       margin: auto;
       text-align: center;
-      color: #666;
+    }
+
+    .about p {
+      color: var(--text);
       font-size: 17px;
     }
 
-    /* PRODUCTS */
+    .highlight {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .highlight div {
+      text-align: center;
+    }
+
+    .highlight strong {
+      display: block;
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 28px;
+    }
+
+    .highlight span {
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    /* ================= COLLECTION ================= */
+
+    .collection {
+      background: #f3e8da;
+    }
+
     .products {
+      max-width: 1100px;
+      margin: auto;
+
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      gap: 22px;
     }
 
     .card {
       background: white;
-      border: 1px solid #ead8c5;
       padding: 35px 25px;
       text-align: center;
-      border-radius: 15px;
-      transition: 0.3s;
+      border: 1px solid #eadccc;
+      border-radius: 18px;
+      transition: .3s;
     }
 
     .card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(60, 45, 30, .10);
     }
 
-    .card-icon {
-      font-size: 45px;
-      margin-bottom: 15px;
+    .icon {
+      width: 75px;
+      height: 75px;
+      margin: auto auto 20px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 50%;
+      background: var(--cream);
+      font-size: 32px;
     }
 
     .card h3 {
       margin-bottom: 10px;
-      color: #444;
+      font-family: Georgia, serif;
+      font-size: 23px;
     }
 
     .card p {
-      color: #777;
+      color: var(--text);
       font-size: 14px;
     }
 
-    /* CTA */
+    /* ================= PROCESS ================= */
+
+    .process {
+      max-width: 950px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .number {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 20px;
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    /* ================= BUDGET ================= */
+
+    .budget {
+      background: var(--brown);
+      color: white;
+      text-align: center;
+    }
+
+    .budget .section-title span {
+      color: var(--gold-light);
+    }
+
+    .budget .section-title h2 {
+      color: white;
+    }
+
+    .budget .section-title p {
+      color: #d5cec7;
+    }
+
+    /* ================= CTA ================= */
+
     .cta {
       text-align: center;
-      background: #f3e5d5;
+      background: var(--cream-dark);
     }
 
     .cta h2 {
-      font-size: 38px;
+      font-family: Georgia, serif;
+      font-size: 42px;
+      font-weight: normal;
       margin-bottom: 10px;
     }
 
     .cta p {
-      color: #666;
+      color: var(--text);
+      max-width: 600px;
+      margin: auto;
     }
 
-    /* FOOTER */
+    /* ================= FOOTER ================= */
+
     footer {
-      background: #302a25;
+      padding: 50px 20px;
+      background: #241f1b;
       color: white;
       text-align: center;
-      padding: 35px 20px;
     }
 
     footer .logo {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     footer p {
-      color: #ccc;
+      color: #bdb5ad;
       font-size: 13px;
     }
 
-    /* MOBILE */
-    @media (max-width: 768px) {
+    .social {
+      margin: 20px 0;
+    }
+
+    .social a {
+      margin: 0 10px;
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 800px) {
+
       nav {
-        padding: 15px 5%;
+        padding: 0 5%;
       }
 
       nav ul {
-        display: none;
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .logo {
+        font-size: 17px;
+        letter-spacing: 2px;
+      }
+
+      .hero {
+        min-height: 80vh;
+        padding: 60px 5%;
+      }
+
+      .hero h1 {
+        letter-spacing: 4px;
+      }
+
+      section {
+        padding: 75px 5%;
       }
 
       .products {
         grid-template-columns: 1fr;
       }
 
-      section {
-        padding: 70px 5%;
+      .process {
+        grid-template-columns: 1fr;
+        gap: 45px;
       }
 
-      .hero {
-        min-height: 80vh;
-      }
-
-      .hero h1 {
-        letter-spacing: 4px;
+      .section-title h2 {
+        font-size: 34px;
       }
     }
   </style>
 </head>
 
+
 <body>
 
   <!-- NAVBAR -->
+
   <nav>
-    <div class="logo">MAY PROJECT</div>
+
+    <div class="logo">
+      MAY PROJECT
+    </div>
 
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#produk">Produk</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#collection">Collection</a></li>
       <li><a href="#order">Order</a></li>
     </ul>
+
   </nav>
 
 
   <!-- HERO -->
+
   <section class="hero" id="home">
+
     <div class="hero-content">
 
-      <small>Gift • Bouquet • Hampers</small>
+      <div class="eyebrow">
+        Gift • Bouquet • Hampers
+      </div>
 
-      <h1>MAY PROJECT</h1>
+      <h1>
+        MAY PROJECT
+      </h1>
+
+      <h2>
+        Thoughtful Gifts, Beautiful Moments.
+      </h2>
 
       <p>
-        Hadiah sederhana dengan sentuhan personal
-        untuk membuat setiap momen menjadi lebih berkesan.
+        Hadiah yang dibuat dengan sentuhan personal
+        untuk menemani setiap momen spesial dalam hidupmu.
       </p>
 
-      <a href="#produk" class="btn">
-        Lihat Produk
-      </a>
+      <div class="buttons">
+
+        <a href="#collection" class="btn btn-primary">
+          Explore Collection
+        </a>
+
+        <a href="#order" class="btn btn-outline">
+          Custom Order
+        </a>
+
+      </div>
 
     </div>
+
   </section>
 
 
   <!-- ABOUT -->
+
   <section id="about">
 
     <div class="section-title">
-      <span>About Us</span>
-      <h2>Tentang May Project</h2>
+
+      <span>
+        About May Project
+      </span>
+
+      <h2>
+        More Than Just A Gift
+      </h2>
+
     </div>
 
     <div class="about">
+
       <p>
-        May Project hadir untuk membantu kamu memberikan hadiah
-        yang lebih personal dan berkesan.
-        Kami menyediakan berbagai pilihan gift,
-        bouquet, hampers dan custom gift untuk berbagai momen.
+        May Project adalah ruang untuk menciptakan hadiah
+        yang terasa lebih personal. Mulai dari bouquet,
+        gift box, hampers hingga custom gift, setiap pesanan
+        dapat disesuaikan dengan momen, karakter dan budget kamu.
       </p>
+
+      <div class="highlight">
+
+        <div>
+          <strong>01</strong>
+          <span>Personal</span>
+        </div>
+
+        <div>
+          <strong>02</strong>
+          <span>Custom</span>
+        </div>
+
+        <div>
+          <strong>03</strong>
+          <span>Made With Care</span>
+        </div>
+
+      </div>
+
     </div>
 
   </section>
 
 
-  <!-- PRODUCTS -->
-  <section id="produk">
+  <!-- COLLECTION -->
+
+  <section class="collection" id="collection">
 
     <div class="section-title">
-      <span>Our Collection</span>
-      <h2>Produk Kami</h2>
+
+      <span>
+        Our Collection
+      </span>
+
+      <h2>
+        Pilih Hadiahmu
+      </h2>
+
+      <p>
+        Berbagai pilihan untuk ulang tahun,
+        wisuda, anniversary, lamaran dan momen lainnya.
+      </p>
+
     </div>
+
 
     <div class="products">
 
+
       <div class="card">
-        <div class="card-icon">💐</div>
-        <h3>Bouquet</h3>
+
+        <div class="icon">
+          💐
+        </div>
+
+        <h3>
+          Bouquet
+        </h3>
+
         <p>
           Bouquet bunga, uang, snack, coklat,
-          boneka dan custom sesuai kebutuhan.
+          boneka dan berbagai pilihan custom.
         </p>
+
       </div>
 
+
       <div class="card">
-        <div class="card-icon">🎁</div>
-        <h3>Gift Box</h3>
+
+        <div class="icon">
+          🎁
+        </div>
+
+        <h3>
+          Gift Box
+        </h3>
+
         <p>
           Gift box untuk ulang tahun,
-          anniversary, graduation dan berbagai momen spesial.
+          anniversary dan berbagai momen spesial.
         </p>
+
       </div>
 
+
       <div class="card">
-        <div class="card-icon">🧺</div>
-        <h3>Hampers</h3>
+
+        <div class="icon">
+          🧺
+        </div>
+
+        <h3>
+          Hampers
+        </h3>
+
         <p>
-          Hampers dan parcel untuk kebutuhan personal
-          maupun acara perusahaan.
+          Hampers dan parcel untuk kebutuhan
+          personal maupun perusahaan.
         </p>
+
       </div>
 
+
       <div class="card">
-        <div class="card-icon">🎓</div>
-        <h3>Graduation</h3>
+
+        <div class="icon">
+          🎓
+        </div>
+
+        <h3>
+          Graduation
+        </h3>
+
         <p>
-          Hadiah wisuda yang bisa dibuat
-          sesuai karakter dan budget.
+          Hadiah wisuda yang dapat disesuaikan
+          dengan karakter dan budget.
         </p>
+
       </div>
 
+
       <div class="card">
-        <div class="card-icon">💍</div>
-        <h3>Special Moment</h3>
+
+        <div class="icon">
+          💍
+        </div>
+
+        <h3>
+          Special Moment
+        </h3>
+
         <p>
           Lamaran, anniversary, wedding,
-          seserahan dan berbagai momen penting.
+          seserahan dan momen penting lainnya.
         </p>
+
       </div>
 
+
       <div class="card">
-        <div class="card-icon">✨</div>
-        <h3>Custom</h3>
+
+        <div class="icon">
+          🏢
+        </div>
+
+        <h3>
+          Corporate Gift
+        </h3>
+
         <p>
-          Punya konsep sendiri?
-          Kami bisa membantu mewujudkannya.
+          Souvenir, hampers, doorprize,
+          parcel dan kebutuhan acara perusahaan.
         </p>
+
       </div>
 
     </div>
@@ -365,37 +696,170 @@
   </section>
 
 
-  <!-- ORDER -->
-  <section class="cta" id="order">
+  <!-- HOW TO ORDER -->
 
-    <h2>Punya Momen Spesial?</h2>
+  <section>
 
-    <p>
-      Ceritakan kebutuhan dan budget kamu.
-      Kami bantu buatkan konsep hadiahnya.
-    </p>
+    <div class="section-title">
 
-    <!-- NOMOR WA NANTI KITA GANTI -->
+      <span>
+        How To Order
+      </span>
+
+      <h2>
+        Semudah Ini
+      </h2>
+
+    </div>
+
+
+    <div class="process">
+
+      <div class="step">
+
+        <div class="number">
+          01
+        </div>
+
+        <h3>
+          Ceritakan Kebutuhan
+        </h3>
+
+        <p>
+          Sampaikan jenis hadiah,
+          momen dan konsep yang kamu inginkan.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="number">
+          02
+        </div>
+
+        <h3>
+          Tentukan Budget
+        </h3>
+
+        <p>
+          Beritahu kisaran budget.
+          Kita sesuaikan konsep dengan kebutuhanmu.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="number">
+          03
+        </div>
+
+        <h3>
+          Kami Siapkan
+        </h3>
+
+        <p>
+          Konsep disiapkan dan pesanan
+          dibuat untuk momen spesialmu.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BUDGET -->
+
+  <section class="budget">
+
+    <div class="section-title">
+
+      <span>
+        Your Budget, Your Choice
+      </span>
+
+      <h2>
+        Punya Budget Tertentu?
+      </h2>
+
+      <p>
+        Tidak perlu bingung memilih.
+        Ceritakan budget kamu dan kebutuhanmu,
+        lalu kita cari konsep yang sesuai.
+      </p>
+
+    </div>
+
     <a
-      href="https://wa.me/62XXXXXXXXXX"
-      class="btn"
-      target="_blank">
-      Order via WhatsApp
+      href="#order"
+      class="btn btn-primary">
+
+      Request Your Gift
+
     </a>
 
   </section>
 
 
-  <!-- FOOTER -->
-  <footer>
+  <!-- ORDER -->
 
-    <div class="logo">MAY PROJECT</div>
+  <section class="cta" id="order">
+
+    <h2>
+      Let's Create Something Special
+    </h2>
 
     <p>
-      Gift • Bouquet • Hampers • Custom
+      Siap membuat momen seseorang menjadi lebih berkesan?
+      Hubungi May Project dan ceritakan ide kamu.
     </p>
 
-    <br>
+    <div class="buttons">
+
+      <!-- NOMOR WHATSAPP AKAN KITA GANTI NANTI -->
+
+      <a
+        href="https://wa.me/62XXXXXXXXXX"
+        target="_blank"
+        class="btn btn-primary">
+
+        Order via WhatsApp
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="logo">
+      MAY PROJECT
+    </div>
+
+    <p>
+      Thoughtful Gifts, Beautiful Moments.
+    </p>
+
+    <div class="social">
+
+      <a href="#" target="_blank">
+        TikTok
+      </a>
+
+      <a href="#" target="_blank">
+        Instagram
+      </a>
+
+    </div>
 
     <p>
       © 2026 May Project. All rights reserved.
