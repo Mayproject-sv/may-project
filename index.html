@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>May Project | Gift & Hampers</title>
+
+  <meta name="description" content="May Project - Custom gift, bouquet, hampers dan hadiah untuk berbagai momen spesial.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffaf5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,250,245,0.95);
+      border-bottom: 1px solid #ead8c5;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      color: #b28a52;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #b28a52;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 7%;
+      background:
+        radial-gradient(circle at top right, #f4dfc5, transparent 35%),
+        #fffaf5;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero small {
+      color: #b28a52;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 90px);
+      margin: 15px 0;
+      letter-spacing: 8px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      color: #666;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      border-radius: 30px;
+      background: #b28a52;
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #96703e;
+    }
+
+    /* SECTION */
+    section {
+      padding: 90px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title span {
+      color: #b28a52;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-top: 8px;
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #666;
+      font-size: 17px;
+    }
+
+    /* PRODUCTS */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ead8c5;
+      padding: 35px 25px;
+      text-align: center;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .card-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .card p {
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      background: #f3e5d5;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      color: #666;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #302a25;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer .logo {
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #ccc;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav {
+        padding: 15px 5%;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 5%;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+
+      .hero h1 {
+        letter-spacing: 4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">MAY PROJECT</div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#produk">Produk</a></li>
+      <li><a href="#order">Order</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <small>Gift • Bouquet • Hampers</small>
+
+      <h1>MAY PROJECT</h1>
+
+      <p>
+        Hadiah sederhana dengan sentuhan personal
+        untuk membuat setiap momen menjadi lebih berkesan.
+      </p>
+
+      <a href="#produk" class="btn">
+        Lihat Produk
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="section-title">
+      <span>About Us</span>
+      <h2>Tentang May Project</h2>
+    </div>
+
+    <div class="about">
+      <p>
+        May Project hadir untuk membantu kamu memberikan hadiah
+        yang lebih personal dan berkesan.
+        Kami menyediakan berbagai pilihan gift,
+        bouquet, hampers dan custom gift untuk berbagai momen.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTS -->
+  <section id="produk">
+
+    <div class="section-title">
+      <span>Our Collection</span>
+      <h2>Produk Kami</h2>
+    </div>
+
+    <div class="products">
+
+      <div class="card">
+        <div class="card-icon">💐</div>
+        <h3>Bouquet</h3>
+        <p>
+          Bouquet bunga, uang, snack, coklat,
+          boneka dan custom sesuai kebutuhan.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎁</div>
+        <h3>Gift Box</h3>
+        <p>
+          Gift box untuk ulang tahun,
+          anniversary, graduation dan berbagai momen spesial.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧺</div>
+        <h3>Hampers</h3>
+        <p>
+          Hampers dan parcel untuk kebutuhan personal
+          maupun acara perusahaan.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎓</div>
+        <h3>Graduation</h3>
+        <p>
+          Hadiah wisuda yang bisa dibuat
+          sesuai karakter dan budget.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">💍</div>
+        <h3>Special Moment</h3>
+        <p>
+          Lamaran, anniversary, wedding,
+          seserahan dan berbagai momen penting.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">✨</div>
+        <h3>Custom</h3>
+        <p>
+          Punya konsep sendiri?
+          Kami bisa membantu mewujudkannya.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ORDER -->
+  <section class="cta" id="order">
+
+    <h2>Punya Momen Spesial?</h2>
+
+    <p>
+      Ceritakan kebutuhan dan budget kamu.
+      Kami bantu buatkan konsep hadiahnya.
+    </p>
+
+    <!-- NOMOR WA NANTI KITA GANTI -->
+    <a
+      href="https://wa.me/62XXXXXXXXXX"
+      class="btn"
+      target="_blank">
+      Order via WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="logo">MAY PROJECT</div>
+
+    <p>
+      Gift • Bouquet • Hampers • Custom
+    </p>
+
+    <br>
+
+    <p>
+      © 2026 May Project. All rights reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
