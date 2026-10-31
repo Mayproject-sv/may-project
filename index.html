@@ -1,871 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAY PROJECT | Custom Gifting & Event Solution</title>
+<meta name="description" content="MAY PROJECT — Custom Gifting & Event Solution untuk personal, corporate, dan event. Custom, Made to Order, PO.">
+<style>
+:root{--iv:#faf6ef;--cr:#f0e3d1;--gold:#b28a52;--brown:#302821;--txt:#675e55;--line:#e5d7c5;--dark:#211d19;--white:#fff;--shadow:0 18px 50px #49362114}*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;background:var(--iv);color:var(--brown);line-height:1.65;position:relative;overflow-x:hidden}body:before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 8% 12%,#b28a5210 0 2px,transparent 3px),radial-gradient(circle at 92% 72%,#b28a520d 0 2px,transparent 3px);background-size:42px 42px,55px 55px;opacity:.55}section{position:relative;overflow:hidden}section:not(.corp):not(.trust):before{content:'✦';position:absolute;top:35px;right:5%;font-size:42px;color:#b28a5218;transform:rotate(12deg)}section:not(.corp):not(.trust):after{content:'';position:absolute;width:220px;height:220px;border:1px solid #b28a5215;border-radius:50%;left:-90px;bottom:-110px;box-shadow:90px -35px 0 -35px #b28a5208,135px 25px 0 -55px #b28a5208;pointer-events:none}.wrap{position:relative;z-index:1}a{text-decoration:none;color:inherit}.wrap{width:min(1180px,90%);margin:auto}.eyebrow{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:999px;font-size:13px;font-weight:700;border:1px solid var(--gold);cursor:pointer}.primary{background:var(--gold);color:#fff}.outline{color:var(--gold);background:transparent}.dark{background:var(--brown);color:#fff;border-color:var(--brown)}section{padding:92px 0}.head{text-align:center;max-width:720px;margin:0 auto 48px}.head h2,.serif{font-family:Georgia,serif;font-weight:400}.head h2{font-size:clamp(32px,4vw,48px);line-height:1.15;margin:9px 0 12px}.head p{color:var(--txt)}
+nav{position:sticky;top:0;z-index:20;background:#faf6efeF;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.navin{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:25px}.logo{font-weight:700;letter-spacing:4px;color:var(--gold);font-size:20px}.logo small{display:block;font-size:8px;letter-spacing:2px;color:var(--txt);margin-top:2px}nav ul{display:flex;gap:24px;list-style:none;font-size:13px}nav li:last-child a{background:var(--brown);color:#fff;padding:10px 17px;border-radius:999px}
+.hero{min-height:680px;display:grid;align-items:center;background:radial-gradient(circle at 8% 18%,#ead8be 0,transparent 24%),radial-gradient(circle at 88% 78%,#ead8be 0,transparent 28%),linear-gradient(135deg,#faf6ef 0%,#f5eadc 48%,#faf6ef 100%)}.hero:before{content:'';position:absolute;width:520px;height:520px;border:1px solid #b28a5220;border-radius:50%;right:-210px;top:-190px;box-shadow:inset 0 0 0 35px #b28a5205,inset 0 0 0 80px #b28a5204}.hero:after{content:'M';position:absolute;right:8%;bottom:-100px;font:300 360px Georgia,serif;color:#b28a5207;line-height:1}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center;padding:75px 0}.hero h1{font-family:Georgia,serif;font-size:clamp(52px,7vw,86px);font-weight:400;line-height:.98;margin:13px 0}.hero h1 span{color:var(--gold)}.hero h2{font:400 clamp(24px,3vw,36px) Georgia,serif;color:var(--gold);margin-bottom:17px}.hero p{max-width:610px;color:var(--txt);font-size:16px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.brandcard{width:min(430px,100%);aspect-ratio:1/1.05;border:1px solid var(--line);border-radius:32px;background:linear-gradient(145deg,#fffdf9,#ead9c1);box-shadow:var(--shadow);display:grid;place-items:center;position:relative;overflow:hidden}.brandcard:before{content:"";position:absolute;inset:28px;border:1px solid #b28a5260;border-radius:24px}.brandmark{position:relative;text-align:center}.brandmark b{font:90px Georgia,serif;color:var(--gold)}.brandmark h3{letter-spacing:7px;font-size:20px}.brandmark p{font-size:9px;letter-spacing:2px;color:var(--txt);margin-top:6px}
+.trust{background:var(--brown);color:#fff}.trustGrid{display:grid;grid-template-columns:repeat(4,1fr);padding:23px 0}.trustGrid div{text-align:center;border-right:1px solid #ffffff20}.trustGrid div:last-child{border:0}.trustGrid b{display:block;color:#d7b77f;font-size:13px}.trustGrid span{font-size:11px;color:#d4ccc4}
+.aboutGrid,.corpGrid,.inquiryGrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about h2,.corp h2,.inquiry h2{font:400 clamp(35px,4vw,48px) Georgia,serif;line-height:1.1;margin:10px 0 18px}.about p,.corp p,.inquiry p{color:var(--txt);margin-bottom:12px}.panel{background:var(--cr);border:1px solid var(--line);padding:32px;border-radius:25px;box-shadow:var(--shadow)}.panel h3{font:400 27px Georgia,serif;margin:8px 0 18px}.panel ul{list-style:none;display:grid;gap:13px}.panel li{display:flex;gap:10px;color:var(--txt);font-size:14px}.panel li b{color:var(--gold)}
+.services{background:linear-gradient(135deg,#f4e9da,#efe0cd 50%,#f7eee4);}.services:before{content:'✦  ✧  ✦';position:absolute;left:4%;top:24px;color:#b28a5222;font-size:24px;letter-spacing:15px}.serviceGrid,.productGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;transition:.2s}.card:hover,.product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.icon{width:52px;height:52px;border:1px solid var(--line);background:var(--iv);border-radius:50%;display:grid;place-items:center;font-size:23px;margin-bottom:18px}.card h3{font:400 27px Georgia,serif;margin-bottom:10px}.card p,.card li{font-size:13px;color:var(--txt)}.card ul{list-style:none;display:grid;gap:7px;margin-top:16px}.card li:before{content:'✓';color:var(--gold);margin-right:7px}
+.catalogTop{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}.catalogTop:after{content:'✦';color:#b28a5230;font-size:30px;margin-left:auto}.catalogTop h2{font:400 40px Georgia,serif}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;font-size:11px;cursor:pointer;color:var(--txt)}.filter.active{background:var(--brown);color:#fff;border-color:var(--brown)}.product{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;cursor:pointer;transition:.2s}.media{height:235px;background:linear-gradient(145deg,#f2e4d2,#e6d0af);display:grid;place-items:center;font-size:55px;overflow:hidden}.media img{width:100%;height:100%;object-fit:cover}.pbody{padding:20px}.meta{display:flex;justify-content:space-between;align-items:center}.tag{font-size:9px;letter-spacing:2px;color:var(--gold);font-weight:700}.po{font-size:9px;border:1px solid var(--line);border-radius:20px;padding:3px 7px;color:var(--txt)}.pbody h3{font:400 23px Georgia,serif;margin:7px 0}.pbody p{font-size:12px;color:var(--txt)}.link{display:block;color:var(--gold);font-size:11px;font-weight:700;margin-top:10px}
+.corp{background:var(--dark);color:#fff}.corp p{color:#cec6bd}.corpList{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:22px}.corpList div{border:1px solid #ffffff1c;padding:12px;border-radius:12px;font-size:12px}.corpBox{border:1px solid #d7b77f55;padding:30px;border-radius:25px;background:#ffffff08}.corpBox h3{font:400 28px Georgia,serif;margin:8px 0 12px}.corpBox p{margin-bottom:20px}
+.process{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.step{text-align:center;padding:20px 10px}.num{width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;color:var(--gold);font:20px Georgia,serif}.step h3{font-size:14px}.step p{font-size:11px;color:var(--txt);margin-top:5px}
+.inquiry{background:linear-gradient(135deg,#f0e3d1,#f8f0e7,#eadbc7)}.inquiry:before{content:'';position:absolute;right:-90px;top:20%;width:300px;height:300px;border:1px solid #b28a5220;border-radius:50%;box-shadow:inset 0 0 0 35px #b28a5206,inset 0 0 0 75px #b28a5205}.contact{display:grid;gap:10px;font-size:13px}.contact b{color:var(--gold)}form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}.formGrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:grid;gap:6px;margin-bottom:4px}.field.full{grid-column:1/-1}.field label{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--txt)}input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:11px;outline:none;background:#fff;color:var(--brown)}textarea{min-height:100px;resize:vertical}
+.cta{text-align:center;background:radial-gradient(circle at 50% 0,#ead8be55,transparent 42%)}.cta:before{content:'✧';position:absolute;left:12%;top:35%;font-size:60px;color:#b28a5218}.cta:after{content:'✧';position:absolute;right:12%;top:55%;font-size:45px;color:#b28a5218}.cta h2{font:400 45px Georgia,serif;margin:10px 0}.cta p{max-width:600px;margin:auto;color:var(--txt)}footer{background:var(--dark);color:#fff;padding:50px 0 25px}.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}.foot p,.foot a{font-size:12px;color:#bdb4ab}.foot h4{font-size:11px;letter-spacing:2px;margin-bottom:12px}.foot ul{list-style:none;display:grid;gap:7px}.bottom{text-align:center;border-top:1px solid #ffffff16;margin-top:30px;padding-top:18px;color:#817970;font-size:10px}
+.modal{display:none;position:fixed;inset:0;background:#211d19aa;z-index:100;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modalBox{width:min(850px,100%);background:#fff;border-radius:24px;overflow:auto;max-height:90vh;position:relative}.close{position:absolute;right:12px;top:12px;border:0;background:#fff;width:38px;height:38px;border-radius:50%;font-size:22px;cursor:pointer;z-index:2}.modalGrid{display:grid;grid-template-columns:1fr 1fr}.modalImg{min-height:400px;background:linear-gradient(145deg,#f2e4d2,#e6d0af);display:grid;place-items:center;font-size:65px;overflow:hidden}.modalImg img{width:100%;height:100%;object-fit:cover}.modalBody{padding:38px}.modalBody h2{font:400 37px Georgia,serif;line-height:1.1;margin:8px 0 15px}.modalBody p{font-size:13px;color:var(--txt);margin-bottom:18px}.modalBody ul{list-style:none;display:grid;gap:7px;margin-bottom:23px}.modalBody li{font-size:12px;color:var(--txt)}.modalBody li:before{content:'✓';color:var(--gold);margin-right:7px}
+@media(max-width:850px){nav ul{display:none}.heroGrid,.aboutGrid,.corpGrid,.inquiryGrid{grid-template-columns:1fr}.heroGrid{padding:60px 0}.brandcard{margin:auto}.serviceGrid,.productGrid{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.foot{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){section{padding:72px 0}.trustGrid{grid-template-columns:1fr 1fr}.trustGrid div:nth-child(2){border:0}.serviceGrid,.productGrid,.formGrid,.foot{grid-template-columns:1fr}.catalogTop{display:block}.filters{margin-top:15px}.corpList{grid-template-columns:1fr}.modalGrid{grid-template-columns:1fr}.modalImg{min-height:260px}.modalBody{padding:27px}}
+
+/* Luxury Botanical Engraving — original CSS decoration, no paid assets */
+body {
+ background-color:#faf6ef;
+ background-image:
+  repeating-linear-gradient(0deg,rgba(70,48,27,.018) 0,rgba(70,48,27,.018) 1px,transparent 1px,transparent 5px),
+  repeating-linear-gradient(90deg,rgba(70,48,27,.012) 0,rgba(70,48,27,.012) 1px,transparent 1px,transparent 7px);
+}
+body:after {
+ content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.45;
+ background:radial-gradient(ellipse at 12% 18%,rgba(190,151,91,.14),transparent 28%),
+ radial-gradient(ellipse at 90% 74%,rgba(190,151,91,.12),transparent 30%);
+}
+.botanical-art {position:absolute;pointer-events:none;z-index:0;color:#a17a49;opacity:.32;width:clamp(115px,19vw,265px);height:auto}
+.botanical-art.left {left:-18px;top:5%}
+.botanical-art.right {right:-18px;bottom:2%;transform:scaleX(-1)}
+.hero .botanical-art {opacity:.43}
+.section-inner {position:relative;z-index:1}
+@media(max-width:700px){.botanical-art{opacity:.18;width:130px}.botanical-art.left{left:-45px}.botanical-art.right{right:-45px}}
+
+</style>
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="MAY PROJECT">
+<meta name="keywords" content="MAY PROJECT, custom gifting, corporate hampers, custom flower board, wedding car flowers, backdrop lamaran, backdrop ulang tahun, dekorasi acara, souvenir, Tangerang, Indonesia">
+<meta property="og:title" content="MAY PROJECT | Custom Gifting & Event Solution">
+<meta property="og:description" content="Custom gifting, corporate hampers, souvenirs, merchandise, and event packages made to order.">
 
-  <title>May Project | Thoughtful Gifts</title>
-
-  <meta name="description"
-    content="May Project - Bouquet, gift box, hampers dan custom gifts untuk berbagai momen spesial.">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    :root {
-      --cream: #faf5ee;
-      --cream-dark: #eee2d2;
-      --gold: #b58a50;
-      --gold-light: #d4b27b;
-      --brown: #332b25;
-      --text: #5f5750;
-      --white: #ffffff;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: var(--cream);
-      color: var(--brown);
-      line-height: 1.7;
-    }
-
-    /* ================= NAVBAR ================= */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      height: 75px;
-      padding: 0 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      background: rgba(250, 245, 238, 0.96);
-      border-bottom: 1px solid #e5d7c7;
-    }
-
-    .logo {
-      color: var(--gold);
-      font-size: 23px;
-      font-weight: bold;
-      letter-spacing: 4px;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-    }
-
-    nav a {
-      color: var(--brown);
-      text-decoration: none;
-      font-size: 14px;
-      transition: .3s;
-    }
-
-    nav a:hover {
-      color: var(--gold);
-    }
-
-    /* ================= HERO ================= */
-
-    .hero {
-      min-height: 88vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 80px 7%;
-
-      background:
-        radial-gradient(
-          circle at 15% 20%,
-          #ead7bd 0,
-          transparent 28%
-        ),
-        radial-gradient(
-          circle at 90% 80%,
-          #ead7bd 0,
-          transparent 30%
-        ),
-        var(--cream);
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      letter-spacing: 5px;
-      font-size: 13px;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      margin: 18px 0;
-      font-size: clamp(48px, 9vw, 105px);
-      letter-spacing: 8px;
-      line-height: 1;
-    }
-
-    .hero h2 {
-      font-family: Georgia, serif;
-      font-weight: normal;
-      font-size: clamp(24px, 4vw, 38px);
-      color: var(--gold);
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      color: var(--text);
-      font-size: 16px;
-    }
-
-    .buttons {
-      margin-top: 35px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 30px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-size: 14px;
-      transition: .3s;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      background: #94703f;
-    }
-
-    .btn-outline {
-      border: 1px solid var(--gold);
-      color: var(--gold);
-    }
-
-    .btn-outline:hover {
-      background: var(--gold);
-      color: white;
-    }
-
-    /* ================= SECTION ================= */
-
-    section {
-      padding: 100px 7%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 55px;
-    }
-
-    .section-title span {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 12px;
-    }
-
-    .section-title h2 {
-      margin-top: 8px;
-      font-family: Georgia, serif;
-      font-size: 42px;
-      font-weight: normal;
-    }
-
-    .section-title p {
-      max-width: 600px;
-      margin: 10px auto;
-      color: var(--text);
-    }
-
-    /* ================= ABOUT ================= */
-
-    .about {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .about p {
-      color: var(--text);
-      font-size: 17px;
-    }
-
-    .highlight {
-      margin-top: 35px;
-      display: flex;
-      justify-content: center;
-      gap: 50px;
-      flex-wrap: wrap;
-    }
-
-    .highlight div {
-      text-align: center;
-    }
-
-    .highlight strong {
-      display: block;
-      color: var(--gold);
-      font-family: Georgia, serif;
-      font-size: 28px;
-    }
-
-    .highlight span {
-      color: var(--text);
-      font-size: 13px;
-    }
-
-    /* ================= COLLECTION ================= */
-
-    .collection {
-      background: #f3e8da;
-    }
-
-    .products {
-      max-width: 1100px;
-      margin: auto;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: white;
-      padding: 35px 25px;
-      text-align: center;
-      border: 1px solid #eadccc;
-      border-radius: 18px;
-      transition: .3s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(60, 45, 30, .10);
-    }
-
-    .icon {
-      width: 75px;
-      height: 75px;
-      margin: auto auto 20px;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      border-radius: 50%;
-      background: var(--cream);
-      font-size: 32px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      font-family: Georgia, serif;
-      font-size: 23px;
-    }
-
-    .card p {
-      color: var(--text);
-      font-size: 14px;
-    }
-
-    /* ================= PROCESS ================= */
-
-    .process {
-      max-width: 950px;
-      margin: auto;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-
-    .step {
-      text-align: center;
-    }
-
-    .number {
-      width: 50px;
-      height: 50px;
-      margin: 0 auto 15px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-      color: var(--gold);
-      font-family: Georgia, serif;
-      font-size: 20px;
-    }
-
-    .step h3 {
-      margin-bottom: 8px;
-    }
-
-    .step p {
-      color: var(--text);
-      font-size: 14px;
-    }
-
-    /* ================= BUDGET ================= */
-
-    .budget {
-      background: var(--brown);
-      color: white;
-      text-align: center;
-    }
-
-    .budget .section-title span {
-      color: var(--gold-light);
-    }
-
-    .budget .section-title h2 {
-      color: white;
-    }
-
-    .budget .section-title p {
-      color: #d5cec7;
-    }
-
-    /* ================= CTA ================= */
-
-    .cta {
-      text-align: center;
-      background: var(--cream-dark);
-    }
-
-    .cta h2 {
-      font-family: Georgia, serif;
-      font-size: 42px;
-      font-weight: normal;
-      margin-bottom: 10px;
-    }
-
-    .cta p {
-      color: var(--text);
-      max-width: 600px;
-      margin: auto;
-    }
-
-    /* ================= FOOTER ================= */
-
-    footer {
-      padding: 50px 20px;
-      background: #241f1b;
-      color: white;
-      text-align: center;
-    }
-
-    footer .logo {
-      margin-bottom: 12px;
-    }
-
-    footer p {
-      color: #bdb5ad;
-      font-size: 13px;
-    }
-
-    .social {
-      margin: 20px 0;
-    }
-
-    .social a {
-      margin: 0 10px;
-      color: var(--gold-light);
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    /* ================= MOBILE ================= */
-
-    @media (max-width: 800px) {
-
-      nav {
-        padding: 0 5%;
-      }
-
-      nav ul {
-        gap: 12px;
-      }
-
-      nav a {
-        font-size: 12px;
-      }
-
-      .logo {
-        font-size: 17px;
-        letter-spacing: 2px;
-      }
-
-      .hero {
-        min-height: 80vh;
-        padding: 60px 5%;
-      }
-
-      .hero h1 {
-        letter-spacing: 4px;
-      }
-
-      section {
-        padding: 75px 5%;
-      }
-
-      .products {
-        grid-template-columns: 1fr;
-      }
-
-      .process {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .section-title h2 {
-        font-size: 34px;
-      }
-    }
-  </style>
 </head>
-
-
 <body>
-
-  <!-- NAVBAR -->
-
-  <nav>
-
-    <div class="logo">
-      MAY PROJECT
-    </div>
-
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#collection">Collection</a></li>
-      <li><a href="#order">Order</a></li>
-    </ul>
-
-  </nav>
-
-
-  <!-- HERO -->
-
-  <section class="hero" id="home">
-
-    <div class="hero-content">
-
-      <div class="eyebrow">
-        Gift • Bouquet • Hampers
-      </div>
-
-      <h1>
-        MAY PROJECT
-      </h1>
-
-      <h2>
-        Thoughtful Gifts, Beautiful Moments.
-      </h2>
-
-      <p>
-        Hadiah yang dibuat dengan sentuhan personal
-        untuk menemani setiap momen spesial dalam hidupmu.
-      </p>
-
-      <div class="buttons">
-
-        <a href="#collection" class="btn btn-primary">
-          Explore Collection
-        </a>
-
-        <a href="#order" class="btn btn-outline">
-          Custom Order
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-
-  <section id="about">
-
-    <div class="section-title">
-
-      <span>
-        About May Project
-      </span>
-
-      <h2>
-        More Than Just A Gift
-      </h2>
-
-    </div>
-
-    <div class="about">
-
-      <p>
-        May Project adalah ruang untuk menciptakan hadiah
-        yang terasa lebih personal. Mulai dari bouquet,
-        gift box, hampers hingga custom gift, setiap pesanan
-        dapat disesuaikan dengan momen, karakter dan budget kamu.
-      </p>
-
-      <div class="highlight">
-
-        <div>
-          <strong>01</strong>
-          <span>Personal</span>
-        </div>
-
-        <div>
-          <strong>02</strong>
-          <span>Custom</span>
-        </div>
-
-        <div>
-          <strong>03</strong>
-          <span>Made With Care</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- COLLECTION -->
-
-  <section class="collection" id="collection">
-
-    <div class="section-title">
-
-      <span>
-        Our Collection
-      </span>
-
-      <h2>
-        Pilih Hadiahmu
-      </h2>
-
-      <p>
-        Berbagai pilihan untuk ulang tahun,
-        wisuda, anniversary, lamaran dan momen lainnya.
-      </p>
-
-    </div>
-
-
-    <div class="products">
-
-
-      <div class="card">
-
-        <div class="icon">
-          💐
-        </div>
-
-        <h3>
-          Bouquet
-        </h3>
-
-        <p>
-          Bouquet bunga, uang, snack, coklat,
-          boneka dan berbagai pilihan custom.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">
-          🎁
-        </div>
-
-        <h3>
-          Gift Box
-        </h3>
-
-        <p>
-          Gift box untuk ulang tahun,
-          anniversary dan berbagai momen spesial.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">
-          🧺
-        </div>
-
-        <h3>
-          Hampers
-        </h3>
-
-        <p>
-          Hampers dan parcel untuk kebutuhan
-          personal maupun perusahaan.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">
-          🎓
-        </div>
-
-        <h3>
-          Graduation
-        </h3>
-
-        <p>
-          Hadiah wisuda yang dapat disesuaikan
-          dengan karakter dan budget.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">
-          💍
-        </div>
-
-        <h3>
-          Special Moment
-        </h3>
-
-        <p>
-          Lamaran, anniversary, wedding,
-          seserahan dan momen penting lainnya.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">
-          🏢
-        </div>
-
-        <h3>
-          Corporate Gift
-        </h3>
-
-        <p>
-          Souvenir, hampers, doorprize,
-          parcel dan kebutuhan acara perusahaan.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- HOW TO ORDER -->
-
-  <section>
-
-    <div class="section-title">
-
-      <span>
-        How To Order
-      </span>
-
-      <h2>
-        Semudah Ini
-      </h2>
-
-    </div>
-
-
-    <div class="process">
-
-      <div class="step">
-
-        <div class="number">
-          01
-        </div>
-
-        <h3>
-          Ceritakan Kebutuhan
-        </h3>
-
-        <p>
-          Sampaikan jenis hadiah,
-          momen dan konsep yang kamu inginkan.
-        </p>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="number">
-          02
-        </div>
-
-        <h3>
-          Tentukan Budget
-        </h3>
-
-        <p>
-          Beritahu kisaran budget.
-          Kita sesuaikan konsep dengan kebutuhanmu.
-        </p>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="number">
-          03
-        </div>
-
-        <h3>
-          Kami Siapkan
-        </h3>
-
-        <p>
-          Konsep disiapkan dan pesanan
-          dibuat untuk momen spesialmu.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- BUDGET -->
-
-  <section class="budget">
-
-    <div class="section-title">
-
-      <span>
-        Your Budget, Your Choice
-      </span>
-
-      <h2>
-        Punya Budget Tertentu?
-      </h2>
-
-      <p>
-        Tidak perlu bingung memilih.
-        Ceritakan budget kamu dan kebutuhanmu,
-        lalu kita cari konsep yang sesuai.
-      </p>
-
-    </div>
-
-    <a
-      href="#order"
-      class="btn btn-primary">
-
-      Request Your Gift
-
-    </a>
-
-  </section>
-
-
-  <!-- ORDER -->
-
-  <section class="cta" id="order">
-
-    <h2>
-      Let's Create Something Special
-    </h2>
-
-    <p>
-      Siap membuat momen seseorang menjadi lebih berkesan?
-      Hubungi May Project dan ceritakan ide kamu.
-    </p>
-
-    <div class="buttons">
-
-      <!-- NOMOR WHATSAPP AKAN KITA GANTI NANTI -->
-
-      <a
-        href="https://wa.me/6288295083803?text=Halo%20May%20Project%20%F0%9F%91%8B%0A%0ASaya%20ingin%20memesan%20hadiah.%0A%0AJenis%20produk%3A%0ABudget%3A%0ATanggal%20dibutuhkan%3A%0ACatatan%3A"
-        target="_blank"
-        class="btn btn-primary">
-
-        Order via WhatsApp
-
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <div class="logo">
-      MAY PROJECT
-    </div>
-
-    <p>
-      Thoughtful Gifts, Beautiful Moments.
-    </p>
-
-    <div class="social">
-
-      <a href="#" target="_blank">
-        TikTok
-      </a>
-
-      <a href="#" target="_blank">
-        Instagram
-      </a>
-
-    </div>
-
-    <p>
-      © 2026 May Project. All rights reserved.
-    </p>
-
-  </footer>
-
-</body>
-</html>
+<nav><div class="wrap navin"><a class="logo" href="#home">MAY PROJECT<small>GIFTING • CORPORATE • EVENT</small></a><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#catalog">Catalog</a></li><li><a href="#corporate">Corporate</a></li><li><a href="#inquiry">Inquiry</a></li></ul></div></nav>
+<main>
+
+<svg class="botanical-art left" viewBox="0 0 260 420" aria-hidden="true">
+<g fill="none" stroke="currentColor" stroke-width="1.15">
+<path d="M28 410 C58 340 70 275 86 215 C103 151 126 89 186 20"/>
+<path d="M58 335 C28 306 19 270 28 232 C62 247 77 278 58 335Z"/>
+<path d="M75 273 C45 244 42 211 53 178 C83 195 93 227 75 273Z"/>
+<path d="M92 214 C69 184 72 151 91 122 C114 148 115 180 92 214Z"/>
+<path d="M110 159 C99 126 111 96 138 76 C150 108 139 136 110 159Z"/>
+<path d="M49 343 C82 320 112 316 140 329 C112 353 81 356 49 343Z"/>
+<path d="M67 291 C97 269 126 267 151 281 C125 302 95 305 67 291Z"/>
+<circle cx="184" cy="44" r="19"/><path d="M166 44 C174 28 195 25 204 42 C195 58 174 61 166 44Z"/>
+<path d="M184 25 C184 13 194 5 204 9 C207 21 198 30 184 25Z"/>
+<path d="M184 63 C172 73 171 87 181 95 C193 88 194 74 184 63Z"/>
+<path d="M165 43 C153 35 141 39 137 50 C148 57 159 54 165 43Z"/>
+<path d="M204 43 C217 37 228 42 230 53 C218 58 208 53 204 43Z"/>
+</g></svg>
+
+<svg class="botanical-art right" viewBox="0 0 260 420" aria-hidden="true">
+<g fill="none" stroke="currentColor" stroke-width="1.15">
+<path d="M28 410 C58 340 70 275 86 215 C103 151 126 89 186 20"/>
+<path d="M58 335 C28 306 19 270 28 232 C62 247 77 278 58 335Z"/>
+<path d="M75 273 C45 244 42 211 53 178 C83 195 93 227 75 273Z"/>
+<path d="M92 214 C69 184 72 151 91 122 C114 148 115 180 92 214Z"/>
+<path d="M110 159 C99 126 111 96 138 76 C150 108 139 136 110 159Z"/>
+<path d="M49 343 C82 320 112 316 140 329 C112 353 81 356 49 343Z"/>
+<path d="M67 291 C97 269 126 267 151 281 C125 302 95 305 67 291Z"/>
+<circle cx="184" cy="44" r="19"/><path d="M166 44 C174 28 195 25 204 42 C195 58 174 61 166 44Z"/>
+<path d="M184 25 C184 13 194 5 204 9 C207 21 198 30 184 25Z"/>
+<path d="M184 63 C172 73 171 87 181 95 C193 88 194 74 184 63Z"/>
+<path d="M165 43 C153 35 141 39 137 50 C148 57 159 54 165 43Z"/>
+<path d="M204 43 C217 37 228 42 230 53 C218 58 208 53 204 43Z"/>
+</g></svg>
+<section class="hero" id="home"><div class="wrap heroGrid" section-inner><div><span class="eyebrow">Custom Gifting & Event Solution</span><h1>MAY <span>PROJECT</span></h1><h2>Thoughtfully Made, Meaningfully Given.</h2><p>Hadiah, hampers, souvenir, merchandise, dan kebutuhan event yang dibuat sesuai konsep, jumlah, kebutuhan, dan budget Anda.</p><div class="actions"><a class="btn primary" href="#catalog">Explore Catalog</a><a class="btn outline" href="#inquiry">Request a Quote</a></div></div><div class="brandcard"><div class="brandmark"><b>MP</b><h3>MAY PROJECT</h3><p>CUSTOM GIFTING & EVENT SOLUTION</p></div></div></div></section>
+<div class="trust"><div class="wrap trustGrid"><div><b>Custom</b><span>Disesuaikan kebutuhan</span></div><div><b>Made to Order</b><span>Dibuat setelah konfirmasi</span></div><div><b>PO</b><span>Personal & corporate</span></div><div><b>Flexible</b><span>Konsep, jumlah & budget</span></div></div></div>
+<section id="about"><div class="wrap aboutGrid"><div><span class="eyebrow">About May Project</span><h2>Lebih dari sekadar hadiah.</h2><p>MAY PROJECT adalah <b>Custom Gifting & Event Solution</b> untuk kebutuhan personal, perusahaan, dan event.</p><p>Setiap pesanan dibuat berdasarkan kebutuhan — mulai dari isi, tema, warna, packaging, jumlah, hingga kebutuhan khusus acara.</p></div><div class="panel"><span class="eyebrow">What We Provide</span><h3>Dari konsep sampai siap diberikan.</h3><ul><li><b>01</b> Custom gift dan hampers.</li><li><b>02</b> Corporate package untuk employee, client, dan perusahaan.</li><li><b>03</b> Souvenir, goodie bag, doorprize, dan event kit.</li><li><b>04</b> Packaging sesuai tema dan kebutuhan.</li></ul></div></div></section>
+
+<svg class="botanical-art left" viewBox="0 0 260 420" aria-hidden="true">
+<g fill="none" stroke="currentColor" stroke-width="1.15">
+<path d="M28 410 C58 340 70 275 86 215 C103 151 126 89 186 20"/>
+<path d="M58 335 C28 306 19 270 28 232 C62 247 77 278 58 335Z"/>
+<path d="M75 273 C45 244 42 211 53 178 C83 195 93 227 75 273Z"/>
+<path d="M92 214 C69 184 72 151 91 122 C114 148 115 180 92 214Z"/>
+<path d="M110 159 C99 126 111 96 138 76 C150 108 139 136 110 159Z"/>
+<path d="M49 343 C82 320 112 316 140 329 C112 353 81 356 49 343Z"/>
+<path d="M67 291 C97 269 126 267 151 281 C125 302 95 305 67 291Z"/>
+<circle cx="184" cy="44" r="19"/><path d="M166 44 C174 28 195 25 204 42 C195 58 174 61 166 44Z"/>
+<path d="M184 25 C184 13 194 5 204 9 C207 21 198 30 184 25Z"/>
+<path d="M184 63 C172 73 171 87 181 95 C193 88 194 74 184 63Z"/>
+<path d="M165 43 C153 35 141 39 137 50 C148 57 159 54 165 43Z"/>
+<path d="M204 43 C217 37 228 42 230 53 C218 58 208 53 204 43Z"/>
+</g></svg>
+<section class="services" id="services"><div class="wrap" section-inner><div class="head"><span class="eyebrow">Our Services</span><h2>Satu tempat untuk berbagai kebutuhan.</h2><p>Empat layanan utama untuk kebutuhan gifting, floral, corporate, dan dekorasi acara.</p></div><div class="serviceGrid"><article class="card"><div class="icon">🎁</div><h3>May Gift</h3><p>Hadiah personal untuk momen yang ingin dibuat lebih berkesan.</p><ul><li>Gift Box & Hampers</li><li>Buket Bunga & Uang</li><li>Birthday & Anniversary</li><li>Graduation Gift</li><li>Personalized Gift</li></ul></article><article class="card"><div class="icon">🏢</div><h3>May Corporate</h3><p>Gifting dan merchandise untuk kebutuhan perusahaan.</p><ul><li>Corporate Hampers</li><li>Employee Appreciation</li><li>Welcome Kit</li><li>Corporate Merchandise</li><li>Client Gift & Doorprize</li></ul></article><article class="card"><div class="icon">🎉</div><h3>May Event</h3><p>Souvenir, backdrop, dan dekorasi untuk berbagai acara.</p><ul><li>Dekorasi Lamaran & Tunangan</li><li>Backdrop Ulang Tahun</li><li>Photo Corner & Event Styling</li><li>Wedding & Gathering Package</li><li>Custom Souvenir & Goodie Bag</li></ul></article><article class="card"><div class="icon">🌿</div><h3>May Floral</h3><p>Rangkaian bunga dan dekorasi floral sesuai konsep acara.</p><ul><li>Custom Karangan Bunga</li><li>Bunga Mobil Pengantin</li><li>Buket & Rangkaian Bunga</li><li>Flower Board Ucapan</li><li>Floral Decoration</li></ul></article></div></div></section>
+<section id="catalog"><div class="wrap" section-inner><div class="catalogTop"><div><span class="eyebrow">Selected Catalog</span><h2>Explore Our Collection</h2></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="gift">Gift</button><button class="filter" data-filter="corporate">Corporate</button><button class="filter" data-filter="event">Event</button><button class="filter" data-filter="floral">Floral</button></div></div><div class="productGrid" id="productGrid">
+<div class="product" data-cat="gift" data-name="Premium Gift Box" data-desc="Gift box custom untuk birthday, anniversary, appreciation, dan momen spesial lainnya." data-icon="🎁" data-img=""><div class="media">🎁</div><div class="pbody"><div class="meta"><span class="tag">MAY GIFT</span><span class="po">PO</span></div><h3>Premium Gift Box</h3><p>Gift box custom dengan isi dan tema sesuai kebutuhan.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="gift" data-name="Bouquet Collection" data-desc="Buket bunga, uang, snack, cokelat, boneka, dan kombinasi custom untuk berbagai momen." data-icon="💐" data-img=""><div class="media">💐</div><div class="pbody"><div class="meta"><span class="tag">MAY GIFT</span><span class="po">PO</span></div><h3>Bouquet Collection</h3><p>Buket custom untuk birthday, graduation, anniversary, dan lainnya.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="gift" data-name="Custom Hampers" data-desc="Hampers personal dengan pilihan isi, tema, warna, dan packaging yang dapat disesuaikan." data-icon="🧺" data-img="images/hampers.jpg"><div class="media"><img src="images/hampers.jpg" alt="Custom Hampers" onerror="this.remove();this.parentElement.textContent='🧺'"></div><div class="pbody"><div class="meta"><span class="tag">MAY GIFT</span><span class="po">PO</span></div><h3>Custom Hampers</h3><p>Hampers personal yang dapat dibuat sesuai tema dan budget.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="gift" data-name="Graduation Gift" data-desc="Gift dan bouquet custom untuk wisuda, dapat disesuaikan dengan karakter penerima." data-icon="🎓" data-img=""><div class="media">🎓</div><div class="pbody"><div class="meta"><span class="tag">MAY GIFT</span><span class="po">PO</span></div><h3>Graduation Gift</h3><p>Hadiah wisuda dengan konsep yang personal.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="corporate" data-name="Corporate Hampers" data-desc="Hampers perusahaan untuk client, employee, partner, seasonal gifting, dan appreciation." data-icon="🏢" data-img=""><div class="media">🏢</div><div class="pbody"><div class="meta"><span class="tag">MAY CORPORATE</span><span class="po">PO</span></div><h3>Corporate Hampers</h3><p>Custom corporate gifting untuk berbagai kebutuhan perusahaan.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="corporate" data-name="Employee Appreciation Box" data-desc="Gift box untuk employee appreciation, milestone, reward, dan internal company event." data-icon="💼" data-img=""><div class="media">💼</div><div class="pbody"><div class="meta"><span class="tag">MAY CORPORATE</span><span class="po">PO</span></div><h3>Employee Appreciation Box</h3><p>Gift untuk apresiasi karyawan dan momen internal.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="corporate" data-name="Welcome Kit" data-desc="Welcome kit custom untuk employee, intern, member, atau kebutuhan onboarding." data-icon="🎒" data-img=""><div class="media">🎒</div><div class="pbody"><div class="meta"><span class="tag">MAY CORPORATE</span><span class="po">PO</span></div><h3>Welcome Kit</h3><p>Paket onboarding dan welcome gift yang dapat dipersonalisasi.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="corporate" data-name="Seminar Kit" data-desc="Seminar kit dan goodie bag untuk kebutuhan perusahaan, training, workshop, dan meeting." data-icon="📋" data-img=""><div class="media">📋</div><div class="pbody"><div class="meta"><span class="tag">MAY CORPORATE</span><span class="po">PO</span></div><h3>Seminar Kit</h3><p>Kit untuk seminar, training, workshop, dan gathering.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="event" data-name="Custom Souvenir" data-desc="Souvenir custom untuk wedding, lamaran, gathering, graduation, dan event lainnya." data-icon="🎀" data-img=""><div class="media">🎀</div><div class="pbody"><div class="meta"><span class="tag">MAY EVENT</span><span class="po">PO</span></div><h3>Custom Souvenir</h3><p>Souvenir yang dibuat sesuai tema dan konsep acara.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="event" data-name="Event Goodie Bag" data-desc="Goodie bag custom untuk seminar, gathering, wedding, school event, dan acara lainnya." data-icon="🛍️" data-img=""><div class="media">🛍️</div><div class="pbody"><div class="meta"><span class="tag">MAY EVENT</span><span class="po">PO</span></div><h3>Event Goodie Bag</h3><p>Goodie bag custom untuk berbagai kebutuhan event.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="event" data-name="Doorprize Package" data-desc="Paket doorprize custom untuk gathering, corporate event, community event, dan acara lainnya." data-icon="🎁" data-img=""><div class="media">🎁</div><div class="pbody"><div class="meta"><span class="tag">MAY EVENT</span><span class="po">PO</span></div><h3>Doorprize Package</h3><p>Paket hadiah untuk kebutuhan acara dan gathering.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="event" data-name="Custom Event Package" data-desc="Paket custom untuk kebutuhan event yang memerlukan beberapa produk sekaligus." data-icon="✨" data-img=""><div class="media">✨</div><div class="pbody"><div class="meta"><span class="tag">MAY EVENT</span><span class="po">PO</span></div><h3>Custom Event Package</h3><p>Gabungan kebutuhan event yang disusun sesuai brief.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="floral" data-name="Custom Flower Board" data-desc="Karangan bunga ucapan custom untuk grand opening, pernikahan, ucapan selamat, dan duka cita. Tulisan, warna, dan konsep dapat disesuaikan." data-icon="💐" data-img=""><div class="media">💐</div><div class="pbody"><div class="meta"><span class="tag">MAY FLORAL</span><span class="po">PO</span></div><h3>Custom Flower Board</h3><p>Karangan bunga untuk ucapan dan berbagai momen.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="floral" data-name="Wedding Car Flowers" data-desc="Dekorasi bunga dan pita untuk mobil pengantin, dapat disesuaikan dengan warna dan tema pernikahan." data-icon="🚘" data-img=""><div class="media">🚘</div><div class="pbody"><div class="meta"><span class="tag">MAY FLORAL</span><span class="po">PO</span></div><h3>Wedding Car Flowers</h3><p>Dekorasi floral dan pita untuk mobil pengantin.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="event" data-name="Engagement Backdrop" data-desc="Konsep backdrop lamaran atau tunangan dengan panel, nama pasangan, bunga, dan styling area foto sesuai tema." data-icon="💍" data-img=""><div class="media">💍</div><div class="pbody"><div class="meta"><span class="tag">MAY EVENT</span><span class="po">PO</span></div><h3>Engagement Backdrop</h3><p>Backdrop lamaran dan tunangan custom.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="event" data-name="Birthday Backdrop & Decoration" data-desc="Backdrop ulang tahun anak maupun dewasa, dengan pilihan tema, nama, balon, bunga, dan area foto." data-icon="🎂" data-img=""><div class="media">🎂</div><div class="pbody"><div class="meta"><span class="tag">MAY EVENT</span><span class="po">PO</span></div><h3>Birthday Backdrop & Decoration</h3><p>Backdrop dan dekorasi ulang tahun sesuai tema.</p><span class="link">View Details →</span></div></div>
+<div class="product" data-cat="event" data-name="Custom Event Backdrop" data-desc="Backdrop custom untuk anniversary, bridal shower, baby shower, gathering, acara sekolah, dan acara kantor." data-icon="✨" data-img=""><div class="media">✨</div><div class="pbody"><div class="meta"><span class="tag">MAY EVENT</span><span class="po">PO</span></div><h3>Custom Event Backdrop</h3><p>Backdrop untuk acara personal maupun corporate.</p><span class="link">View Details →</span></div></div>
+
+</div></div></section>
+<section class="corp" id="corporate"><div class="wrap corpGrid"><div><span class="eyebrow">May Corporate</span><h2>Corporate gifting yang terasa lebih personal.</h2><p>Untuk perusahaan yang membutuhkan hampers, merchandise, welcome kit, seminar kit, souvenir, atau package khusus dalam jumlah tertentu.</p><div class="corpList"><div>Corporate Hampers</div><div>Employee Appreciation</div><div>Welcome Kit</div><div>Merchandise</div><div>Seminar Kit</div><div>Doorprize</div></div></div><div class="corpBox"><span class="eyebrow">Corporate Inquiry</span><h3>Butuh package khusus?</h3><p>Kirim kebutuhan, jumlah, target budget, dan tanggal dibutuhkan. Kami bantu menyesuaikan konsep.</p><a class="btn primary" href="#inquiry">Request Corporate Quote</a></div></div></section>
+<section><div class="wrap" section-inner><div class="head"><span class="eyebrow">How It Works</span><h2>Simple. Custom. Clear.</h2><p>Proses dibuat sederhana agar kebutuhan personal maupun corporate mudah dijelaskan.</p></div><div class="process"><div class="step"><div class="num">01</div><h3>Tell Us</h3><p>Ceritakan kebutuhan atau event.</p></div><div class="step"><div class="num">02</div><h3>Customize</h3><p>Tentukan isi, tema, dan packaging.</p></div><div class="step"><div class="num">03</div><h3>Quote</h3><p>Sesuaikan konsep dengan budget.</p></div><div class="step"><div class="num">04</div><h3>Production</h3><p>Dibuat setelah detail dikonfirmasi.</p></div><div class="step"><div class="num">05</div><h3>Delivery</h3><p>Siap dikirim atau diambil.</p></div></div></div></section>
+
+<svg class="botanical-art left" viewBox="0 0 260 420" aria-hidden="true">
+<g fill="none" stroke="currentColor" stroke-width="1.15">
+<path d="M28 410 C58 340 70 275 86 215 C103 151 126 89 186 20"/>
+<path d="M58 335 C28 306 19 270 28 232 C62 247 77 278 58 335Z"/>
+<path d="M75 273 C45 244 42 211 53 178 C83 195 93 227 75 273Z"/>
+<path d="M92 214 C69 184 72 151 91 122 C114 148 115 180 92 214Z"/>
+<path d="M110 159 C99 126 111 96 138 76 C150 108 139 136 110 159Z"/>
+<path d="M49 343 C82 320 112 316 140 329 C112 353 81 356 49 343Z"/>
+<path d="M67 291 C97 269 126 267 151 281 C125 302 95 305 67 291Z"/>
+<circle cx="184" cy="44" r="19"/><path d="M166 44 C174 28 195 25 204 42 C195 58 174 61 166 44Z"/>
+<path d="M184 25 C184 13 194 5 204 9 C207 21 198 30 184 25Z"/>
+<path d="M184 63 C172 73 171 87 181 95 C193 88 194 74 184 63Z"/>
+<path d="M165 43 C153 35 141 39 137 50 C148 57 159 54 165 43Z"/>
+<path d="M204 43 C217 37 228 42 230 53 C218 58 208 53 204 43Z"/>
+</g></svg>
+<section class="inquiry" id="inquiry"><div class="wrap inquiryGrid"><div><span class="eyebrow">Order & Inquiry</span><h2>Tell us what you have in mind.</h2><p>Belum tahu produk yang cocok? Isi kebutuhan dasar, lalu lanjutkan percakapan melalui WhatsApp.</p><div class="contact"><div><b>WhatsApp</b><br>0851 9653 8898</div><div><b>Email</b><br>hello.mayproject@gmail.com</div><div><b>Instagram / TikTok</b><br>@mayprojectofficial</div><div><b>Location</b><br>Tangerang, Indonesia</div></div></div><form id="inquiryForm"><div class="formGrid"><div class="field"><label>NAMA</label><input id="name" required placeholder="Nama Anda"></div><div class="field"><label>KEBUTUHAN</label><select id="type"><option>Personal Gift</option><option>Corporate</option><option>Event</option></select></div><div class="field"><label>PRODUK / KEBUTUHAN</label><input id="need" required placeholder="Contoh: hampers, souvenir, welcome kit"></div><div class="field"><label>JUMLAH</label><input id="qty" placeholder="Contoh: 50 pcs"></div><div class="field"><label>BUDGET</label><input id="budget" placeholder="Contoh: Rp 2.000.000"></div><div class="field"><label>TANGGAL DIBUTUHKAN</label><input id="date" type="date"></div><div class="field full"><label>DETAIL</label><textarea id="notes" placeholder="Tema, warna, isi, logo perusahaan, atau detail lainnya"></textarea></div></div><button class="btn primary" type="submit">Continue via WhatsApp →</button></form></div></section>
+<section class="cta"><div class="wrap" section-inner><span class="eyebrow">Let's Create Something Meaningful</span><h2>Have an idea? Let's make it real.</h2><p>Untuk kebutuhan personal, corporate, maupun event, ceritakan konsep Anda kepada MAY PROJECT.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="https://wa.me/6285196538898" target="_blank" rel="noopener">WhatsApp May Project</a><a class="btn outline" href="mailto:hello.mayproject@gmail.com">Email Us</a></div></div></section>
+</main>
+<footer><div class="wrap" section-inner><div class="foot"><div><a class="logo" href="#home">MAY PROJECT<small>GIFTING • CORPORATE • EVENT</small></a><p>Custom Gifting & Event Solution untuk kebutuhan personal, corporate, dan event.</p></div><div><h4>Explore</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#catalog">Catalog</a></li><li><a href="#corporate">Corporate</a></li></ul></div><div><h4>Connect</h4><ul><li><a href="https://wa.me/6285196538898" target="_blank">WhatsApp</a></li><li><a href="https://instagram.com/mayprojectofficial" target="_blank">Instagram</a></li><li><a href="https://tiktok.com/@mayprojectofficial" target="_blank">TikTok</a></li><li><a href="mailto:hello.mayproject@gmail.com">Email</a></li></ul></div></div><div class="bottom">© 2026 MAY PROJECT. All rights reserved. • Thoughtfully Made, Meaningfully Given.</div></div></footer>
+<div class="modal" id="modal"><div class="modalBox"><button class="close" id="close">×</button><div class="modalGrid"><div class="modalImg" id="modalImg">🎁</div><div class="modalBody"><span class="eyebrow" id="modalCat">MAY GIFT</span><h2 id="modalTitle">Product</h2><p id="modalDesc"></p><ul><li>Customizable sesuai kebutuhan</li><li>Made to Order / PO</li><li>Jumlah dan budget dapat dibicarakan</li><li>Personal, corporate, maupun event</li></ul><a class="btn primary" id="modalOrder" target="_blank">Order Produk Ini via WhatsApp</a></div></div></div></div>
+<script>
+const WA='6285196538898';
+const filters=document.querySelectorAll('.filter'),products=document.querySelectorAll('.product');
+filters.forEach(f=>f.onclick=()=>{filters.forEach(x=>x.classList.remove('active'));f.classList.add('active');const v=f.dataset.filter;products.forEach(p=>p.style.display=v==='all'||p.dataset.cat===v?'':'none')});
+const modal=document.getElementById('modal'),mImg=document.getElementById('modalImg'),mTitle=document.getElementById('modalTitle'),mDesc=document.getElementById('modalDesc'),mCat=document.getElementById('modalCat'),mOrder=document.getElementById('modalOrder');
+products.forEach(p=>p.onclick=()=>{const name=p.dataset.name,cat=p.dataset.cat,img=p.dataset.img,icon=p.dataset.icon;mTitle.textContent=name;mDesc.textContent=p.dataset.desc;mCat.textContent=cat==='gift'?'MAY GIFT':cat==='corporate'?'MAY CORPORATE':cat==='floral'?'MAY FLORAL':'MAY EVENT';mImg.innerHTML=img?`<img src="${img}" alt="${name}" onerror="this.parentElement.textContent='${icon}'">`:icon;mOrder.href='https://wa.me/'+WA+'?text='+encodeURIComponent('Halo MAY PROJECT 👋\n\nSaya tertarik dengan produk: '+name+'\nSaya ingin mengetahui detail, pilihan custom, dan estimasi harganya.\n\nNama:\nJumlah:\nBudget:\nTanggal dibutuhkan:\nCatatan:');modal.classList.add('open')});
+function closeModal(){modal.classList.remove('open')}document.getElementById('close').onclick=closeModal;modal.onclick=e=>{if(e.target===modal)closeModal()};document.onkeydown=e=>{if(e.key==='Escape')closeModal()};
+document.getElementById('inquiryForm').onsubmit=e=>{e.preventDefault();const g=id=>document.getElementById(id).value.trim()||'-';const msg='Halo MAY PROJECT 👋\n\nSaya ingin melakukan inquiry.\n\nNama: '+g('name')+'\nKebutuhan: '+g('type')+'\nProduk/Need: '+g('need')+'\nJumlah: '+g('qty')+'\nBudget: '+g('budget')+'\nTanggal dibutuhkan: '+g('date')+'\nDetail: '+g('notes');window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank')};
+</script>
+</body></html>
